@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Education & Job Outcomes in Ontario</title>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1D3557;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #457B9D;
+}
+
+header {
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.cta {
+  margin-top: 30px;
+}
+
+.cta a {
+  background: white;
+  color: #1D3557;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+  border-bottom: 1px solid #eee;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  border-left: 5px solid #457B9D;
+  padding-left: 10px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.highlight {
+  background: #eaf4ff;
+  padding: 15px;
+  border-left: 4px solid #457B9D;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #1D3557;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#problem">Problem</a>
+  <a href="#solution">Dashboard</a>
+  <a href="#insights">Insights</a>
+  <a href="#process">Design</a>
+</nav>
+
+<header>
+  <h1>Education’s Impact on Job Opportunities</h1>
+  <p>
+    Choosing a field of study is one of the most important decisions students make.
+    This project explores how education shapes earnings and job quality across Ontario.
+  </p>
+  <div class="cta">
+    <a href="#solution">Explore Dashboard ↓</a>
+  </div>
+</header>
+
+<section id="problem" class="fade">
+  <h2>The Problem</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Outcomes vary across fields</strong>
+      <p>Graduates from different disciplines experience significantly different earnings and employment outcomes.</p>
+    </div>
+    <div class="card">
+      <strong>Lack of accessible insights</strong>
+      <p>Students often rely on fragmented or anecdotal information when making decisions.</p>
+    </div>
+    <div class="card">
+      <strong>Data is hard to interpret</strong>
+      <p>Existing datasets are complex and not designed for intuitive comparison.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <h2>Why It Matters</h2>
+  <p>
+    Choosing a field of study has long-term implications, yet the relationship between education,
+    income, and job quality is often unclear to students.
+  </p>
+  <ul>
+    <li>Impacts long-term earnings potential</li>
+    <li>Affects job stability and satisfaction</li>
+    <li>Shapes career trajectories</li>
+  </ul>
+</section>
+
+<section class="fade">
+  <h2>What Can You Explore?</h2>
+  <ul>
+    <li>Which fields have the highest earnings?</li>
+    <li>How have outcomes changed between 2015 and 2020?</li>
+    <li>Do higher earnings correspond to better job quality?</li>
+  </ul>
+</section>
+
+<section id="solution" class="fade">
+  <h2>Interactive Dashboard</h2>
+
+  <p>
+    This dashboard connects education to real-world outcomes by comparing earnings
+    and employment quality across fields of study. It enables both high-level comparison
+    and detailed exploration of individual disciplines.
+  </p>
+
+  <div class="highlight">
+    <strong>How to use:</strong>
+    <ul>
+      <li>Select a field using the dropdown</li>
+      <li>Compare earnings trends on the left</li>
+      <li>Analyze employment outcomes on the right</li>
+    </ul>
+  </div>
+
+  <iframe src="https://charlizenancoo.shinyapps.io/Ash313/"></iframe>
+
+  <div class="highlight">
+    <strong>Key Insight:</strong>
+    Higher earnings do not always correspond to higher job satisfaction or field alignment,
+    highlighting important trade-offs between income and job quality.
+  </div>
+
+</section>
+
+<section class="fade">
+  <h2>Geographic Distribution</h2>
+  <p>
+    This view provides additional context by showing how education and program distribution
+    vary geographically across Ontario.
+  </p>
+  <iframe src="https://charlizenancoo.shinyapps.io/Char313/"></iframe>
+</section>
+
+<section id="insights" class="fade">
+  <h2>Key Insights</h2>
+  <ul>
+    <li>STEM and Health fields consistently show the highest earnings</li>
+    <li>Some fields have high employment but lower alignment with field of study</li>
+    <li>Earnings increased across most disciplines between 2015 and 2020</li>
+    <li>Job satisfaction varies independently of income</li>
+  </ul>
+</section>
+
+<section id="process" class="fade">
+  <h2>Design Approach</h2>
+  <p>
+    This project integrates multiple labour market indicators into coordinated views.
+    A dumbbell plot highlights changes in earnings over time, while grouped bar charts
+    enable comparison of employment quality metrics.
+  </p>
+
+  <p>
+    Interaction allows users to focus on a specific field while maintaining context,
+    supporting both overview and detailed analysis.
+  </p>
+</section>
+
+<section class="fade">
+  <h2>Limitations</h2>
+  <ul>
+    <li>Aggregated data may hide within-field variation</li>
+    <li>Limited time range (2015–2020)</li>
+    <li>Focused on Ontario bachelor’s graduates</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Group 7 — Puente Cavazos • Flores • Isahac • Nancoo • Dhir</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
